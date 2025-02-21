@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoSerifKR';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NotoSerifKR.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2{
+  font-family: 'NotoSerifKR';
+}
+
+p,a {
+  font-family: 'SUIT-Regular';
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+/* body{
+  height: 100%;
+  width: 100%;
+} */
+section{
+  /* position: relative; */
+  height: 130vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 0;
+  background-color: #212221;
+  /* background-color: #c7ebc7; */
+}
+
+/** frame **/
+/* .frame{
+  width: 95%;
+  height: 87%;
+  border: 3px solid #222;
+  position: absolute;
+  top: 50px;
+  left: 47px;
+} */
+.clip{
+  width: 100px;
+  height: 500px;
+  position: fixed;
+  top: 200px;
+  left: 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.clip > div{
+  background-image: url(./images/circle.png);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.clip > div:hover{
+  filter: brightness(0.7);
+}
+.clip > div > a{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 5px;
+  text-align: center;
+  margin-top: 60px;
+  margin-right: 20px;
+}
+
+/****** #cover *******/
+
+#cover{
+
+
+}
+
+#cover > img{
+  width: 80%;
+  height: 80%;
+  margin-bottom: 20px;
+}
+
+/****** #about me ******/
+.pic{
+  width: 80%;
+  height: 100%;
+  border-radius: 20px;
+  margin: auto;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); */
+}
+
+
+
+/****** #project ******/
+
+/* #project{
+  height: 600vh;
+} */
+
+.wrap{
+  width: 80%;
+  height: 600vh;
+  margin-top: 370px;
+  /* border: 1px solid #fff; */
+  /* border-radius: 20px; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+
+.wrap > .card{
+  width: 50%;
+  height: 60%;
+  padding: 30px;
+  /* background-color: #fff; */
+  background-image: url(./images/pppaer.png);
+  background-color: #e7e7e7ea;
+  opacity: 0.9;
+  box-shadow: 20px 20px 20px rgba(0,0,0,0.4);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.wrap > .card  > .card-title{
+    width: 20%;
+    height: 65%;
+    margin-top: 20px;
+    text-align: left;
+    border: 1px solid #222;
+    background-color: #f5f5f5;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+}
+.wrap > .card >  .card-title > h1{
+    font-size: 1.5rem;
+    margin-left: 20px;
+    font-weight: normal;
+}
+
+.wrap > .card >  .card-title > h2{
+  font-size: 1.5rem;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.wrap > .card > .card-title > .go {
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  text-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+}
+.wrap > .card > .card-title > img{
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 350px;
+  left: 50px;
+}
+.wrap > .card > .card-detail{
+  width: 80%;
+  /* text-align: right; */
+  position: absolute;
+  bottom: 15%;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.wrap > .card > .card-detail > p > span{
+  font-size: 0.85rem;
+  margin-left: 20px;
+}
+.wrap > .card  > img:nth-of-type(1){
+  width: 30%;
+  height: 10%;
+  position: absolute;
+  right: 270px;
+  top: -40px;
+  z-index: 1;
+}
+
+.wrap > .card >   a > img{
+  width: 65%;
+  height: 45%;
+  position: absolute;
+  right: 35px;
+  top: 120px;
+}
+
+.wrap > .card >  a > img:hover{
+  opacity: 0.9;
+}
+
+
+
+#skill {
+  position: relative;
+  height: 100vh; /* 충분한 스크롤을 위해 섹션의 높이를 크게 설정 */
+
+}
+
+.letter {
+  width: 50%;
+  height: 45%;
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  box-shadow: 15px 15px 15px rgba(0,0,0,0.7);
+  top: 350px;
+  transition: opacity 2s ease;
+  /* transition: opacity 2s ease, op 0.1s ease, z-index 0.1s ease;  */
+}
+
+.envel {
+  width: 55%;
+  height: 50%;
+  opacity: 0;
+  z-index: 2; /* 처음엔 .envel이 카드 위에 있게 설정 */
+  position: absolute;
+  top: 350px; /* .envel의 위치를 설정 */
+  left: 50%;
+  box-shadow: 15px 15px 15px rgba(0,0,0,0.7);
+  transform: translateX(-50%); /* 가로 가운데 정렬 */
+  transition: opacity 2s ease; /* 서서히 보이게 하기 위해 2초간 애니메이션 */
+}
+
