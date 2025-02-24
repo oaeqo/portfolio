@@ -45,12 +45,12 @@ a{
 } */
 section{
   /* position: relative; */
-  height: 130vh;
+  height: 150vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 45px 0;
+  /* padding: 45px 0; */
   background-color: #212221;
   /* background-color: #c7ebc7; */
 }
@@ -130,101 +130,101 @@ section{
 
 /****** #project ******/
 
-/* #project{
-  height: 600vh;
-} */
 
-.wrap{
-  width: 80%;
-  height: auto;
+#project{
+  /* width: 5000px;
+  height: 100%; */
+  overflow-x: hidden;
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+#wrap{
+  width: 600%;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px 0;
+  justify-content: flex-start;
+  /* white-space: nowrap; */
+  /* padding: 20px 0; */
 }
 
 
-.wrap > .card{
-  width: 50%;
-  height: auto;
-  padding: 30px;
+.card{
+  width: 100%;
+  height: 100%;
+  background-color: #212221;
+  /* box-shadow: 20px 20px 20px rgba(0,0,0,0.4); */
+  position: relative;
+  /* padding: 30px; */
+}
+
+.card-wrap {
+  width: 85%;
+  height: 80%;
   background-image: url(./images/pppaer.png);
-  background-color: #e7e7e7ea;
-  opacity: 0.9;
-  box-shadow: 20px 20px 20px rgba(0,0,0,0.4);
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
 }
-.wrap > .card  > .card-title{
-    width: 50%;
-    height: 65%;
-    margin-top: 20px;
+.card  > .card-wrap >  .card-title{
+    width: 40%;
+    height: 50%;
+    margin-top: 50px;
+    margin-left: 50px;
     text-align: left;
     border: 1px solid #222;
     background-color: #f5f5f5;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+    word-break: break-all;
 }
-.wrap > .card >  .card-title > h1{
-    font-size: 1.5rem;
+.card > .card-wrap > .card-title > h1{
+    font-size:2rem;
     margin-left: 20px;
+    margin-top: 15px;
     font-weight: normal;
 }
 
-.wrap > .card >  .card-title > h2{
-  font-size: 1.5rem;
+.card > .card-wrap > .card-title > h2{
+  font-size: 2.5rem;
   margin-left: 20px;
   margin-top: 20px;
 }
-.wrap > .card > .card-title > .go {
+.card > .card-wrap > .card-title > .go {
   position: absolute;
-  top: 250px;
-  left: 50px;
+  font-size: 2rem;
+  bottom: 190px;
+  right: 440px;
   text-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+  cursor: pointer;
+  padding: 60px;
 }
-.wrap > .card > .card-title > img{
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  top: 350px;
-  left: 50px;
-}
-.wrap > .card > .card-detail{
+
+.card >.card-wrap >  .card-detail{
   width: 80%;
   /* text-align: right; */
   position: absolute;
-  bottom: 15%;
-  right: 20px;
+  bottom: 25%;
+  left: 240px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.wrap > .card > .card-detail > p > span{
+.card > .card-wrap > .card-detail > p > span{
   font-size: 0.85rem;
   margin-left: 20px;
 }
-.wrap > .card  > img:nth-of-type(1){
-  width: 30%;
-  height: 10%;
+
+.card >  .card-wrap > a > img{
+  width: 32%;
+  height: 38.5%;
+  border-radius: 10px;
   position: absolute;
-  right: 270px;
-  top: -40px;
-  z-index: 1;
+  right: 250px;
+  top: 160px;
 }
 
-.wrap > .card >   a > img{
-  width: 65%;
-  height: 45%;
-  position: absolute;
-  right: 35px;
-  top: 120px;
-}
-
-.wrap > .card >  a > img:hover{
+.card > .card-wrap > a > img:hover{
   opacity: 0.9;
 }
 
@@ -233,29 +233,32 @@ section{
 
 #skill {
   position: relative;
-  height: 100vh; /* 충분한 스크롤을 위해 섹션의 높이를 크게 설정 */
-
+  height: 130vh; 
+  
 }
 
 .letter {
-  width: 50%;
-  height: 45%;
+  margin-top: 10%;
+  width: 900px;
+  height: 550px;
   position: absolute;
   z-index: 0;
   opacity: 0;
   box-shadow: 15px 15px 15px rgba(0,0,0,0.7);
-  top: 350px;
+  top: 550px;
+  bottom: 0;
   transition: opacity 2s ease, transform 0.3s ease-out;
   /* transition: opacity 2s ease, op 0.1s ease, z-index 0.1s ease;  */
 }
 
 .envel {
-  width: 55%;
-  height: 50%;
+  margin-top: 10%;
+  width: 1000px;
+  height: 600px;
   opacity: 0;
   z-index: 2; /* 처음엔 .envel이 카드 위에 있게 설정 */
-  position: absolute;
-  top: 350px; /* .envel의 위치를 설정 */
+  position: absolute; 
+  top: 50%; 
   left: 50%;
   box-shadow: 15px 15px 15px rgba(0,0,0,0.7);
   transform: translateX(-50%); /* 가로 가운데 정렬 */
