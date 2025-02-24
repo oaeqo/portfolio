@@ -104,14 +104,15 @@ section{
 /****** #cover *******/
 
 #cover{
-
-
+position: relative;
 }
 
 #cover > img{
-  width: 80%;
+  width: 90%;
   height: 80%;
-  margin-bottom: 20px;
+  /* padding-bottom: 70px; */
+  position: absolute;
+  top: -70px;
 }
 
 /****** #about me ******/

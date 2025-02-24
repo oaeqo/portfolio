@@ -9,7 +9,7 @@ window.addEventListener('scroll', function() {
   const letter = document.querySelector('.letter');
 
   // 1. 스크롤 위치가 3367일 때부터 2초 동안 서서히 보이게 하기
-  if (scrollPosition >= 14765) {
+  if (scrollPosition >= 15100) {
       envel.style.opacity = 1;  // .envel 보이게
       envel.style.transition = 'opacity 0.3s ease-in-out';  // 2초간 서서히 보이기
 
@@ -19,11 +19,11 @@ window.addEventListener('scroll', function() {
 
 
  // 2. 스크롤 위치가 3567부터 .letter가 위로 올라가기
-  if (scrollPosition >= 15016) {
-    const moveAmount = Math.min(Math.floor((scrollPosition - 15016) / 5) * 5, 200);
+  if (scrollPosition >= 15200) {
+    const moveAmount = Math.min(Math.floor((scrollPosition - 15200) / 10) * 10, 240);
     letter.style.transform = `translateY(-${moveAmount}px)`;
 
-    if (moveAmount === 200) {
+    if (moveAmount === 240) {
       letter.style.zIndex = 2;
       envel.style.zIndex = 1;
     } else {
