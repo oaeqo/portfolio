@@ -68,7 +68,7 @@ section{
   width: 100px;
   height: 500px;
   position: fixed;
-  top: 200px;
+  top: 0;
   left: 20px;
   z-index: 1;
   display: flex;
@@ -77,17 +77,17 @@ section{
   align-items: center;
 }
 .clip > div{
-  background-image: url(./images/circle.png);
+  background-image: url(./images/glass.png);
   background-repeat: no-repeat;
-  width: 100px;
-  height: 100px;
+  background-size: cover;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 30px;
   /* text-align: center; */
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
-
 .clip > div:hover{
   filter: brightness(0.7);
 }
@@ -97,8 +97,8 @@ section{
   border-radius: 50%;
   padding: 5px;
   text-align: center;
-  margin-top: 60px;
-  margin-right: 20px;
+  margin-top: 82px;
+  margin-right: -3px;
 }
 
 /****** #cover *******/
@@ -154,7 +154,7 @@ position: relative;
 .card{
   width: 100%;
   height: 100%;
-  background-color: #212221;
+  background-color: #000000;
   /* box-shadow: 20px 20px 20px rgba(0,0,0,0.4); */
   position: relative;
   /* padding: 30px; */
@@ -162,8 +162,8 @@ position: relative;
 
 .card-wrap {
   width: 85%;
-  height: 80%;
-  background-image: url(./images/pppaer.png);
+  height: 85%;
+  background-image: url(./images/note.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -238,20 +238,6 @@ position: relative;
   
 }
 
-.letter {
-  margin-top: 10%;
-  width: 900px;
-  height: 550px;
-  position: absolute;
-  z-index: 0;
-  opacity: 0;
-  box-shadow: 15px 15px 15px rgba(0,0,0,0.7);
-  top: 550px;
-  bottom: 0;
-  transition: opacity 2s ease, transform 0.3s ease-out;
-  /* transition: opacity 2s ease, op 0.1s ease, z-index 0.1s ease;  */
-}
-
 .envel {
   margin-top: 10%;
   width: 1000px;
@@ -266,6 +252,20 @@ position: relative;
   transition: opacity 2s ease, transform 0.3s ease-out; /* 서서히 보이게 하기 위해 2초간 애니메이션 */
 }
 
+.letter {
+  margin-top: 10%;
+  width: 900px;
+  height: 550px;
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  box-shadow: 15px 15px 15px rgba(0,0,0,0.7);
+  top: 550px;
+  bottom: 0;
+  transition: opacity 2s ease, transform 0.3s ease-out;
+}
+
+
 /* 흔들림 애니메이션 */
 @keyframes bounce {
   0%, 100% {
@@ -275,3 +275,47 @@ position: relative;
     transform: translateY(-20px);
   }
 }
+
+/** 미디어쿼리 **/
+@media screen and (max-width:1300px) {
+.envel{
+  width: 700px;
+  height: 400px;
+}
+.letter{
+  width: 650px;
+  height: 400px;
+  margin-top: 0;
+}
+}
+@media screen  and (max-width:950px){
+
+  .envel{
+    width: 500px;
+    height: 300px;
+  }
+  .letter{
+    width: 450px;
+    height: 250px;
+    margin-bottom: 50px;
+  }
+  }
+
+@media screen and (max-width:740px){
+  .envel{
+    width: 400px;
+    height: 300px;
+  }
+  .letter{
+    width: 350px;
+    height: 300px;
+    margin-top: 0;
+  }
+  .clip > div{
+    width: 50px;
+    height: 50px;
+  }
+  .clip > div > a{
+    font-size: 0.8rem;
+  }
+  }

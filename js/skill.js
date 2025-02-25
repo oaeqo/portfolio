@@ -18,19 +18,29 @@ window.addEventListener('scroll', function() {
   }
 
 
- // 2. 스크롤 위치가 3567부터 .letter가 위로 올라가기
-  if (scrollPosition >= 15200) {
-    const moveAmount = Math.min(Math.floor((scrollPosition - 15200) / 10) * 10, 240);
-    letter.style.transform = `translateY(-${moveAmount}px)`;
-
-    if (moveAmount === 240) {
-      letter.style.zIndex = 2;
-      envel.style.zIndex = 1;
-    } else {
+  const {scrollHeight, clientHeight} = this.document.documentElement;
+  if( scrollPosition >= (scrollHeight-clientHeight) ){
+    letter.style.transform = `translateY(-40%)`;
+    letter.style.zIndex = 2;
+    envel.style.zIndex = 1;    
+  } else {
+    letter.style.transform = `translateY(0)`;
       letter.style.zIndex = 1;
       envel.style.zIndex = 2;
-    }
   }
+ // 2. 스크롤 위치가 3567부터 .letter가 위로 올라가기
+  // if (scrollPosition >= 15200) {
+  //   const moveAmount = Math.min(Math.floor((scrollPosition - 15200) / 10) * 10, 250);
+  //   letter.style.transform = `translateY(-${moveAmount}px)`;
+
+  //   if (moveAmount === 250) {
+  //     letter.style.zIndex = 2;
+  //     envel.style.zIndex = 1;
+  //   } else {
+  //     letter.style.zIndex = 1;
+  //     envel.style.zIndex = 2;
+  //   }
+  // }
 });
 
 // 흔들리는 애니메이션 효과 (스크롤과 무관하게 실행)
