@@ -85,11 +85,11 @@ section{
   align-items: center;
 }
 .clip > div{
-  background-image: url(./images/glass.png);
+  background-image: url(./images/clip-btn.bolok.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 70px;
-  height: 70px;
+  width: 75px;
+  height: 75px;
   margin-bottom: 30px;
   /* text-align: center; */
   display: flex;
@@ -161,7 +161,7 @@ position: relative;
 .card{
   width: 100%;
   height: 100%;
-  background-color: #000000;
+  background-color: #0c0c0c;
   /* box-shadow: 20px 20px 20px rgba(0,0,0,0.4); */
   position: relative;
   /* padding: 30px; */
@@ -199,6 +199,7 @@ position: relative;
   margin-top: 20px;
   word-break: break-all;
 }
+
 
 
 .card >.card-wrap >  .card-detail{
@@ -252,7 +253,7 @@ position: relative;
 
 .card > .card-wrap > .right > .go {
   font-family: 'NEXEN_TIRE_Bold';
-  font-size: 4rem;
+  font-size: 3.5rem;
   cursor: pointer;
   padding: 60px;
   z-index: 2;
@@ -261,25 +262,50 @@ position: relative;
   left: 190px;
   padding: 30px;
   word-break: break-all;
-  border: 1px dotted #222;
   border-radius: 90px;
   background-color: rgb(182, 12, 12);
 }
 
+/** 각 카드 **/
+
 #card2 > .card-wrap > .right > .go{
-  background-color: rgb(83, 51, 32);
+  /* background-color: rgb(112, 85, 70); */
+  background: linear-gradient(166deg, rgba(2,0,36,1) 0%, rgba(51,24,13,0.9948354341736695) 1%, rgba(168,117,50,0.7259278711484594) 28%, rgba(110,88,48,0.9304096638655462) 39%, rgba(94,70,27,1) 56%, rgba(108,95,57,0.7903536414565826) 96%);
 }
+
+/** **/
 #card3 > .card-wrap > .right > .go{
-  background-color: rgb(9, 65, 18);
+  background-color: rgb(14, 78, 26);
 }
+
+#card3 > .card-wrap > .card-title > h2{
+  font-size: 5rem;
+  line-height: 110px;
+}
+
+/** **/
 #card4 > .card-wrap > .right > .go{
-  background-color: rgb(216, 112, 71);
+  /* background: linear-gradient(166deg, rgba(2,0,36,1) 0%, rgba(51,24,13,0.9948354341736695) 1%, rgba(23,16,6,0.7259278711484594) 28%, rgba(110,88,48,0.9304096638655462) 39%, rgba(182,35,16,1) 56%, rgba(41,77,48,1) 96%); */
+  background: linear-gradient(338deg, rgba(226,226,226,1) 0%, rgba(51,24,13,0.9948354341736695) 4%, rgba(245,16,9,0.7259278711484594) 19%, rgba(110,25,9,0.9304096638655462) 30%, rgba(43,41,38,1) 50%, rgba(52,33,21,0.7903536414565826) 99%);
 }
+
+#card4 > .card-wrap > .card-title > h2{
+  font-size: 6rem;
+}
+
+/** **/
 #card5 > .card-wrap > .right > .go{
-  background-color: rgb(59, 175, 196);
+  /* background-color: rgb(140, 207, 219); */
+  background: linear-gradient(166deg, rgba(2,0,36,1) 0%, rgba(33,108,116,0.9192051820728291) 1%, rgba(58,176,193,0.9304096638655462) 50%, rgba(95,212,226,1) 65%, rgba(92,212,223,1) 100%);
 }
+
+#card5 > .card-wrap > .card-title > h2{
+  font-size: 6.5rem;
+}
+
+/** **/
 #card6 > .card-wrap > .right > .go{
-  background-color: rgb(145, 38, 88);
+  background-color: rgb(240, 26, 54);
 }
 
 .card > .card-wrap > .right > .go:hover{
