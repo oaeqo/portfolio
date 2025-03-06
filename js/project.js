@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-let sections = gsap.utils.toArray(".card");
+// let sections = gsap.utils.toArray(".card");
 
 // gsap.to("#wrap", {
 //     x: () => `-${document.querySelector("#wrap").scrollWidth - window.innerWidth}px`,
@@ -20,3 +20,24 @@ let sections = gsap.utils.toArray(".card");
 //     }
 // });
 
+const horizontal = document.querySelector("#wrap");
+const sections = gsap.utils.toArray("#wrap > .card");
+
+gsap.to(sections, {
+    xPercent: -100 * (sections.length - 1),
+    ease: "none",
+    scrollTrigger: {
+        trigger: "#project",
+        start: "top top",
+        end: () =>  "+=" + (horizontal.offsetWidth - innerWidth),
+        pin: true,
+        scrub: 1,
+        snap: {
+            snapTo: 1 / (sections.length - 1),
+            inertia: false,
+            duration: {min: 0.1, max: 0.1}
+        },
+        invalidateOnRefresh: true,
+        anticipatePin: 1
+    }
+});

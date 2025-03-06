@@ -22,11 +22,11 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.to("#skill > .card", {
   scrollTrigger: {
     trigger: "#skill",
-    start: "bottom bottom", 
+    start: "5px", 
     end: "+=2000", 
     scrub: 2, 
     pin: true, 
-    anticipatePin: 1
+    anticipatePin: 1,
   },
   scale: 2, 
   opacity: 0,
