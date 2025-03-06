@@ -1,0 +1,372 @@
+@charset "utf-8";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+a{
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+li{
+  list-style: none;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoSerifKR';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NotoSerifKR.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXEN_TIRE_Bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/NEXEN_TIRE_Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2{
+  /* font-family: 'NotoSerifKR'  */
+  font-family: 'NEXEN_TIRE_Bold';
+}
+
+p,a {
+  font-family: 'SUIT-Regular';
+}
+
+
+section{
+  /* position: relative; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #212221;
+}
+
+
+
+
+/****** #cover *******/
+
+#cover{
+position: relative;
+background-color: #0f0f0f;
+}
+
+#cover > img:nth-of-type(1){
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+}
+
+#cover > img:nth-of-type(2){
+  width:100%;
+  height: 110%;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+}
+
+#cover > img:nth-of-type(3) {
+  position: absolute;
+  right: 250px;
+  top: 250px;
+  width: 700px;
+  height: 180px;
+}
+
+#cover > p{
+  position: absolute;
+  top: 600px;
+  right: 130px;
+  z-index: 3;
+  color: #747272;
+}
+
+/****** #about me ******/
+#me{
+  height: 110vh;
+  background-color: #dfdb21;
+  position: relative;
+}
+
+#me > img:nth-of-type(1){
+  width: 95%;
+  height: 110%;
+  z-index: 2;
+}
+
+#me > img:nth-of-type(2){
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  
+}
+
+#me > p {
+  width:40%;
+  position: absolute;
+  top: 380px;
+  right: 570px;
+  line-height: 40px;
+  color: #fff;
+  z-index: 2;
+}
+
+
+/****** #project ******/
+
+
+#project{
+  /* height: 100%; */
+  overflow-x: hidden;
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+#wrap{
+  width: 600%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  /* white-space: nowrap; */
+  /* padding: 20px 0; */
+}
+
+
+.card{
+  width: 100%;
+  height: 100%;
+  background-color: #131212;
+  /* box-shadow: 20px 20px 20px rgba(0,0,0,0.4); */
+  position: relative;
+  /* padding: 30px; */
+}
+
+.card-wrap {
+  width: 85%;
+  height: 85%;
+  background-image: url(./images/note.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+.card  > .card-wrap >  .card-title{
+    width: 40%;
+    height: 50%;
+    margin-top: 50px;
+    margin-left: 50px;
+    text-align: left;
+    /* border: 1px solid #222; */
+    background-color: #f5f5f5;
+    /* box-shadow: 10px 10px 10px rgba(0,0,0,0.2); */
+    word-break: break-all;
+}
+.card > .card-wrap > .card-title > h1{
+    font-size: 5rem;
+    margin-left: 20px;
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+.card > .card-wrap > .card-title > h2{
+  font-size: 7rem;
+  margin-left: 20px;
+  margin-top: 20px;
+  word-break: break-all;
+}
+
+
+
+.card >.card-wrap >  .card-detail{
+  width: 30%;
+  /* text-align: right; */
+  position: absolute;
+  bottom: 16%;
+  left: 190px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px;
+  word-break: break-all;
+  border: 1px dotted #222;
+  border-radius: 90px;
+}
+
+.card > .card-wrap > .card-detail > p{
+  font-size: 1.2rem;
+}
+.card > .card-wrap > .card-detail > p > span{
+  font-size: 1rem;
+  margin-left: 20px;
+}
+
+.card > .card-wrap > .right{
+  width: 35%;
+  height: 60%;
+  /* background-color: rgb(151, 8, 8); */
+  position: absolute;
+  right: 220px;
+  top: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.card > .card-wrap > .right >  a:nth-of-type(1) > img{
+  width: 650px;
+  height: 450px;
+  /* border-radius: 10px; */
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+.card > .card-wrap > .right > a:nth-of-type(1) > img:hover{
+  opacity: 0.9;
+}
+
+.card > .card-wrap > .right > .go {
+  font-family: 'NEXEN_TIRE_Bold';
+  font-size: 3.5rem;
+  cursor: pointer;
+  padding: 60px;
+  z-index: 2;
+  position: absolute;
+  bottom: -19%;
+  left: 190px;
+  padding: 30px;
+  word-break: break-all;
+  border-radius: 90px;
+  background-color: rgb(182, 12, 12);
+}
+
+/** 각 카드 **/
+
+#card2 > .card-wrap > .right > .go{
+  /* background-color: rgb(112, 85, 70); */
+  background: linear-gradient(166deg, rgba(2,0,36,1) 0%, rgba(51,24,13,0.9948354341736695) 1%, rgba(168,117,50,0.7259278711484594) 28%, rgba(110,88,48,0.9304096638655462) 39%, rgba(94,70,27,1) 56%, rgba(108,95,57,0.7903536414565826) 96%);
+}
+
+/** **/
+#card3 > .card-wrap > .right > .go{
+  background-color: rgb(14, 78, 26);
+}
+
+#card3 > .card-wrap > .card-title > h2{
+  font-size: 5rem;
+  line-height: 110px;
+}
+
+/** **/
+#card4 > .card-wrap > .right > .go{
+  /* background: linear-gradient(166deg, rgba(2,0,36,1) 0%, rgba(51,24,13,0.9948354341736695) 1%, rgba(23,16,6,0.7259278711484594) 28%, rgba(110,88,48,0.9304096638655462) 39%, rgba(182,35,16,1) 56%, rgba(41,77,48,1) 96%); */
+  background: linear-gradient(338deg, rgba(226,226,226,1) 0%, rgba(51,24,13,0.9948354341736695) 4%, rgba(245,16,9,0.7259278711484594) 19%, rgba(110,25,9,0.9304096638655462) 30%, rgba(43,41,38,1) 50%, rgba(52,33,21,0.7903536414565826) 99%);
+}
+
+#card4 > .card-wrap > .card-title > h2{
+  font-size: 6rem;
+}
+
+/** **/
+#card5 > .card-wrap > .right > .go{
+  /* background-color: rgb(140, 207, 219); */
+  background: linear-gradient(166deg, rgba(2,0,36,1) 0%, rgba(33,108,116,0.9192051820728291) 1%, rgba(58,176,193,0.9304096638655462) 50%, rgba(95,212,226,1) 65%, rgba(92,212,223,1) 100%);
+}
+
+#card5 > .card-wrap > .card-title > h2{
+  font-size: 6.5rem;
+}
+
+/** **/
+#card6 > .card-wrap > .right > .go{
+  background-color: rgb(240, 26, 54);
+}
+
+.card > .card-wrap > .right > .go:hover{
+  filter: brightness(0.7);
+}
+
+/******* skill *******/
+
+#skill {
+  height: 110vh; 
+  background-color: #141414;
+}
+
+#skill > img{
+  width: 100%;
+  height: 100%;
+}
+
+/** 미디어쿼리 **/
+@media screen and (max-width:1300px) {
+.envel{
+  width: 700px;
+  height: 400px;
+}
+.letter{
+  width: 650px;
+  height: 400px;
+  margin-top: 0;
+}
+}
+@media screen  and (max-width:950px){
+
+  .envel{
+    width: 500px;
+    height: 300px;
+  }
+  .letter{
+    width: 450px;
+    height: 250px;
+    margin-bottom: 50px;
+  }
+  }
+
+
+@media screen and (max-width:740px){
+  .envel{
+    width: 400px;
+    height: 300px;
+  }
+  .letter{
+    width: 350px;
+    height: 300px;
+    margin-top: 0;
+  }
+  .clip > div{
+    width: 50px;
+    height: 50px;
+  }
+  .clip > div > a{
+    font-size: 0.8rem;
+  }
+  }
