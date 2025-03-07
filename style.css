@@ -45,8 +45,9 @@ li{
 }
 
 h1, h2{
+  font-family: 'Pretendard-Regular';
   /* font-family: 'NotoSerifKR'  */
-  font-family: 'NEXEN_TIRE_Bold';
+  /* font-family: 'NEXEN_TIRE_Bold'; */
 }
 
 p,a {
@@ -93,21 +94,27 @@ background-color: #0f0f0f;
 }
 
 #cover > .title {
-  position: fixed;
+  /* position: fixed;
   right: 250px;
-  top: 250px;
+  top: 250px; */
   /* width: 40%;
   height: 25%; */
-  width: 700px;
-  height: 180px;
+  padding-bottom: 10%;
+  padding-left: 50%;
+  width: 40%;
+  height: 20%;
 }
 
 #cover > p{
-  position: absolute;
+  /* position: absolute;
   top: 600px;
-  right: 130px;
+  right: 130px; */
+  width: 100%;
   z-index: 3;
   color: #747272;
+  padding-top: 18%;
+  padding-right: 5%;
+
 }
 
 /****** #about me ******/
@@ -132,12 +139,13 @@ background-color: #0f0f0f;
 
 #me > p {
   width:40%;
-  position: absolute;
-  top: 380px;
-  right: 570px;
-  line-height: 40px;
+  height: 70%;
   color: #fff;
+  line-height: 30px;
   z-index: 2;
+  position: absolute;
+  top: 390px;
+  right: 570px;
 }
 
 
@@ -161,166 +169,144 @@ background-color: #0f0f0f;
   /* padding: 20px 0; */
 }
 
-#wrap > section{
-  width: 100%;
-}
-
 .card{
   width: 100%;
   height: 100%;
   background-color: #131212;
   /* box-shadow: 20px 20px 20px rgba(0,0,0,0.4); */
-  position: relative;
+  /* position: relative; */
   /* padding: 30px; */
 }
 
-.card-wrap {
-  width: 85%;
-  height: 85%;
-  background-image: url(./images/note.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+#wrap > .card > .card-wrap {
+  width: 100%;
+  height: 100%;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10%;
+  padding: 0 10%;
 }
-.card  > .card-wrap >  .card-title{
-    width: 40%;
-    height: 50%;
-    margin-top: 50px;
-    margin-left: 50px;
-    text-align: left;
-    /* border: 1px solid #222; */
-    background-color: #f5f5f5;
-    /* box-shadow: 10px 10px 10px rgba(0,0,0,0.2); */
-    word-break: break-all;
+
+#wrap > .card > .card-wrap > .right > a > img{
+ width: 80%;
+ height: 80%;
+}
+
+#wrap > .card > .card-wrap > .right > a > img:hover{
+  filter: brightness(0.4);
+}
+
+#wrap > .card > .card-wrap > .card-title{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
 }
 .card > .card-wrap > .card-title > h1{
-    font-size: 5rem;
-    margin-left: 20px;
-    margin-top: 15px;
-    font-weight: normal;
+ font-size: 2.5rem;
 }
 
 .card > .card-wrap > .card-title > h2{
-  font-size: 7rem;
-  margin-left: 20px;
-  margin-top: 20px;
-  word-break: break-all;
+  font-size: 4rem;
 }
 
 
-
-.card >.card-wrap >  .card-detail{
-  width: 33%;
-  /* text-align: right; */
-  position: absolute;
-  bottom: 16%;
-  left: 190px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 50px;
-  word-break: break-all;
-  border: 1px dotted #222;
-  border-radius: 90px;
+#wrap > .card > .card-wrap > .card-title > a{
+  margin-top: 5%;
+  padding: 4%;
+  border: 1px solid #070707;
+  border-radius: 40px;
 }
 
-.card > .card-wrap > .card-detail > p{
-  font-size: 1.2rem;
+#wrap > .card > .card-wrap > .card-title > a:hover{
+  filter: brightness(0.7);
 }
-.card > .card-wrap > .card-detail > p > span{
-  font-size: 1rem;
-  margin-left: 20px;
-}
-
-.card > .card-wrap > .right{
-  width: 750px;
-  height: 750px;
-  /* background-color: rgb(151, 8, 8); */
-  position: absolute;
-  right: 170px;
-  top: 80px;
-
-}
-
-
-.card > .card-wrap > .right >  a:nth-of-type(1) > img{
-  width: 100%;
-  height: 100%;
-  /* border-radius: 10px; */
-  position: absolute;
-  right: 0;
-  top: 20px;
-}
-
-.card > .card-wrap > .right > a:nth-of-type(1) > img:hover{
-  opacity: 0.9;
-}
-
-/* .card > .card-wrap > .right > .go {
-  font-family: 'NEXEN_TIRE_Bold';
-  font-size: 3.5rem;
-  cursor: pointer;
-  padding: 60px;
-  z-index: 2;
-  position: absolute;
-  bottom: -19%;
-  left: 190px;
-  padding: 30px;
-  word-break: break-all;
-  border-radius: 90px;
-  background-color: rgb(182, 12, 12);
-} */
 
 /** 각 카드 **/
 
-#card2 > .card-wrap > .right > .go{
-  /* background-color: rgb(112, 85, 70); */
-  background: linear-gradient(166deg, rgba(2,0,36,1) 0%, rgba(51,24,13,0.9948354341736695) 1%, rgba(168,117,50,0.7259278711484594) 28%, rgba(110,88,48,0.9304096638655462) 39%, rgba(94,70,27,1) 56%, rgba(108,95,57,0.7903536414565826) 96%);
+
+/** **/
+#wrap > #card1 > .card-wrap > .card-title > a{
+  border: 1px solid #fff;
+  color: #fff;
+}
+#wrap > #card1 > .card-wrap > .card-title > h1,
+#wrap > #card1 > .card-wrap > .card-title > h2,
+#wrap > #card1 > .card-wrap > .card-title > p {
+  color: #fff;
 }
 
 /** **/
-#card3 > .card-wrap > .right > .go{
-  background-color: rgb(14, 78, 26);
+
+#wrap > #card2 {
+  background-color: #a18761;
+}
+
+#wrap > #card2 > .card-wrap > .right > a > img:hover{
+  filter: contrast(0.6);
+}
+
+
+/** **/
+#card3 {
+  background-color: #11491d;
 }
 
 #card3 > .card-wrap > .card-title > h2{
-  font-size: 5rem;
-  line-height: 110px;
+  width: 90%;
+}
+/** **/
+
+#card4 {
+  background-color: #f5c55edc;
+}
+
+#card4 > .card-wrap > .card-title > p:nth-of-type(3){
+  line-height: 30px;
+  width: 70%;
 }
 
 /** **/
-#card4 > .card-wrap > .right > .go{
-  /* background: linear-gradient(166deg, rgba(2,0,36,1) 0%, rgba(51,24,13,0.9948354341736695) 1%, rgba(23,16,6,0.7259278711484594) 28%, rgba(110,88,48,0.9304096638655462) 39%, rgba(182,35,16,1) 56%, rgba(41,77,48,1) 96%); */
-  background: linear-gradient(338deg, rgba(226,226,226,1) 0%, rgba(51,24,13,0.9948354341736695) 4%, rgba(245,16,9,0.7259278711484594) 19%, rgba(110,25,9,0.9304096638655462) 30%, rgba(43,41,38,1) 50%, rgba(52,33,21,0.7903536414565826) 99%);
+#card5 {
+  background-color: #3fc2c7;
 }
 
-#card4 > .card-wrap > .card-title > h2{
-  font-size: 6rem;
+#wrap >  #card5 > .card-wrap > .right > a > img{
+  width: 65%;
+  height: 40%;
+}
+
+#wrap > #card5 > .card-wrap > .card-title{
+  padding-right: 10%;
+  width: 100%;
+}
+
+#wrap > #card5 > .card-wrap > .card-title > h2{
+  width: 100%;
+}
+
+#wrap > #card5 > .card-wrap > .card-title > p:nth-of-type(3){
+  line-height: 30px;
+  width: 100%;
+}
+
+#wrap > #card5 > .card-wrap > .card-title > a{
+  padding: 10%;
 }
 
 /** **/
-#card5 > .card-wrap > .right > .go{
-  /* background-color: rgb(140, 207, 219); */
-  background: linear-gradient(166deg, rgba(2,0,36,1) 0%, rgba(33,108,116,0.9192051820728291) 1%, rgba(58,176,193,0.9304096638655462) 50%, rgba(95,212,226,1) 65%, rgba(92,212,223,1) 100%);
-}
-
-#card5 > .card-wrap > .card-title > h2{
-  font-size: 6.5rem;
-}
-
-/** **/
-#card6 > .card-wrap > .right > .go{
-  background-color: rgb(240, 26, 54);
-}
-
-.card > .card-wrap > .right > .go:hover{
-  filter: brightness(0.7);
+#card6 {
+  background-color: #b8b8b8;
 }
 
 /******* skill *******/
 
 #skill {
-  height: 110vh; 
+  height: 120vh; 
   background-color: #141414;
 }
 
@@ -330,29 +316,25 @@ background-color: #0f0f0f;
 }
 
 /** 미디어쿼리 **/
-/* 웹 */
+
 @media screen and (max-width:1300px) {
-  .title{
-
-    width: 200px;
-    height: 180px;
-  }
+#me > p{
+  position: absolute;
+  right: 400px;
 }
 
-#project > #wrap > .card > .card-wrap > .right > a > img{
-  width: 500px;
-  height: 700px;
-  
 }
 
 
-/* 패드 */
+
+
+
 @media screen  and (max-width:950px){
 
 
   }
 
-/* 모바일 */
+
 @media screen and (max-width:740px){
 
   }

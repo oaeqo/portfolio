@@ -22,8 +22,9 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.to("#skill > .card", {
   scrollTrigger: {
     trigger: "#skill",
-    start: "5px", 
-    end: "+=2000", 
+    // start: "5px", 
+    start: "bottom bottom",
+    end: "+=3500", 
     scrub: 2, 
     pin: true, 
     anticipatePin: 1,
